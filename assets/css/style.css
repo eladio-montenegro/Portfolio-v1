@@ -53,7 +53,7 @@ h3 {
 /* header */
 
 #masthead {
-  position: fixed;
+  position: static;
   z-index: 99;
   width: 100%;
   margin: 0 0 30px;
@@ -219,12 +219,16 @@ input[type=submit] {
 
 }
 @media (max-width:768px){
-  .row, .navbar {
+  .row, .nav {
     flex-direction: column;
+  }
+  .nav {
+    clear: both;
+    float: left;
   }
 }
   @media (max-width:640px){
-    .row, .navbar {
+    .row, .nav {
       flex-direction: column;
     }
     #logo {
@@ -232,11 +236,16 @@ input[type=submit] {
       margin-right: 50px;
     }
     .nav {
+      clear: both;
+      float: left;
       text-align: center;
 
     }
     #auth-image {
+      clear: both;
       float: right;
+      padding: 20px;
+      margin-bottom: 20px; 
 
     }
 }
